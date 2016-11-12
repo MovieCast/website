@@ -1,0 +1,51 @@
+name: MovieCast
+description: Watch movies like never before.
+avatar: /images/logo.png
+
+social-links:
+  dribbble:
+  email: hello@moviecast.xyz
+  facebook:
+  flickr:
+  github: moviecast
+  instagram:
+  linkedin:
+  pinterest:
+  rss:
+  twitter: MovieCastNews
+  stackoverflow:
+  youtube:
+  googleplus:
+
+
+disqus:
+google_analytics:
+url: http://moviecast.xyz
+baseurl: ""
+
+permalink: /:title/
+version: v3.3.0
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+sass:
+  sass_dir: assets/_sass
+  style: :compressed
+
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+
+include: [_pages]
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
