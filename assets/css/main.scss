@@ -14,12 +14,17 @@ sitemap: false
 /* BASE RULES */
 /**************/
 
+html,
+body {
+  height: 100%;	
+}
+
 html {
   font-size: 100%;
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -272,11 +277,20 @@ nav {
   }
 }
 
+
+// To fix the footerzzz
+.wrapper-site {
+  min-height: 100%;
+}
+
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
+  
+  // Now because the site wrapper's height is 100% we need to "translateY" the footer up a bit.
+  transform: translateY(-139px); // I just know the footer will be around 89px high, and 89+50=140px so we need a offset of 139px, ezzzz right?
 }
 
 footer {
