@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dev Update 1
-date: 2016-11-29
+date: 2016-12-04
 author: Grey
 banner: http://www.topofandroid.com/wp-content/uploads/2015/05/Android-L-Material-Design-Wallpapers-5.png
 ---
