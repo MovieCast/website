@@ -8,7 +8,7 @@ banner: http://www.topofandroid.com/wp-content/uploads/2015/05/Android-L-Materia
 This is our first dev update and we are happy to write this very first update.
 In these updates, we shall talk about our progress and what we are planning for future updates.
 
-## Introductie
+## Introduction
 
 Because this is the very first update, we shall explain what MovieCast is, and what our primairy goal is.
 MovieCast is an application where you can easily stream movies and TV series,
