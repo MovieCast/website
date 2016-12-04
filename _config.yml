@@ -21,7 +21,7 @@ social-links:
 
 disqus:
 google_analytics: UA-88175066-1
-url: http://moviecast.xyz
+url: https://moviecast.xyz
 baseurl: ""
 
 permalink: /:title/
