@@ -3,16 +3,36 @@ layout: default
 ---
 
 <div class="posts">
+  
   {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
+  <div class="container-blog">
+    <div class="header-container-blog">
+      <img src="{{ post.banner }}" alt="" class="header-image-blog" />
+      <div class="header-blog">
+        <h1 class="main-heading-blog"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} <small>- {{ post.author }}</small></a></h1>
+      </div> <!-- END header -->
+    </div>
+    
+    <div class="overlay-header-blog"></div>
+    
+    <div class="body-blog">
+      <!--img src="{{ post.pfp }}" alt="Hugh Jackman" class="body-image-blog" /-->
+      <!--button class="body-action-button-blog u-flex-center-blog"></button-->
+      
+      <div class="u-clearfix-blog"></div>
+      <div class="body-info-blog">
         {{ post.excerpt }}
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+      <div class="body-more-blog" onclick="window.location.href = '{{ site.baseurl }}{{ post.url }}'">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+    </div>
+  </div>
   {% endfor %}
 </div>
+
+
+

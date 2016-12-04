@@ -2,6 +2,7 @@
 layout: post
 title: Hello, World!
 author: Dizzy
+banner: http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg
 ---
 
 Hello everyone. We, the development team of Moviecast, are happy to announce that this will be our new website.
