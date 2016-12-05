@@ -322,7 +322,7 @@ footer {
   margin: 50px auto;
   overflow: hidden;
   width: 95%;
-  border: 1px solid lightgrey;
+  border: 1px solid #eee;
   border-top: none;
 }
 
@@ -401,11 +401,12 @@ footer {
   background-color: rgba(255, 255, 255,1);
   color: #555;
   margin-top: -50px;
-  padding: 0 15px 15px;
+  padding: 0 15px 0px;
   position: relative;
 }
 
 .body-image-blog {
+  overflow: none;
   border-radius: 100%;
   box-shadow: 5px 10px 75px rgba(0, 0, 0, .4);
   float: left;
@@ -461,7 +462,7 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#eeeeee',GradientType=0 );
   cursor: pointer;
   margin: -57px auto 0px;
-  padding: 20px 0 20px;
+  padding: 20px 0 10px;
   position: relative;
   text-align: center;
 }
@@ -529,6 +530,18 @@ footer {
 
 .card-list-blog li:first-child {
   margin-left: 0;
+}
+
+.txt-prot {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  z-index: -1;
+  margin: -20;
+  background: -webkit-linear-gradient(#444, rgba(0,0,0,0));
+  background: -o-linear-gradient(#444, rgba(0,0,0,0));
+  background: -ms-linear-gradient(#444, rgba(0,0,0,0));
+  background: linear-gradient(#444, rgba(0,0,0,0));  
 }
 
 
