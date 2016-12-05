@@ -1,5 +1,5 @@
 name: MovieCast
-description: Watch movies 
+description: Watch movies like never before!
 words: '"like never before!", "like it&#39;s 1999!", "with us!", "with your pet!", "for fun!"'
 avatar: /images/logo.png
 
@@ -12,7 +12,7 @@ social-links:
   instagram:
   linkedin:
   pinterest:
-  rss:
+  rss: true
   twitter: MovieCastNews
   stackoverflow:
   youtube:
