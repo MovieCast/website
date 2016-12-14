@@ -16,7 +16,7 @@ The brain and founder of our team, always working on something new, he's our lea
 He professions in AngularJS and Node.JS and is currently working at the backend all on his own!
 
 #### Grey
-Our lead web designer, mostly spends his time either writing stylesheets or translating articles because ItsDizzy sucks at English (jk wuv you Dizzy <3).
+Our lead web designer and front end developer, mostly spends his time either writing stylesheets, cool javascript visuals or translating articles because ItsDizzy sucks at English (jk wuv you Dizzy <3).
 He loves experimenting  with new looks and boops noses :3.
 
 
