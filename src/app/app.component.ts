@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
-import '../../public/css/styles.css';
-import '../../public/css/animate.css';
+import { HeaderComponent } from './header.component'
 
 @Component({
   selector: 'my-app',
