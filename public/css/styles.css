@@ -1,0 +1,133 @@
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+main {
+    margin-top: 0px!important;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+html {
+    background-image: url('../img/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+*, *:before,*:after {
+    box-sizing: inherit;
+}
+
+.mdl-layout__drawer.is-visible~.mdl-layout__content.mdl-layout__content {
+    overflow-y: scroll!important;
+}
+
+.grid-wrap {
+  text-align: center;
+  min-width: 80%;
+}
+
+.wrap {
+    display: inline-block;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  position: relative;
+  margin: 50px;
+  display: inline-block;
+}
+.spinner:after, .spinner:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.spinner-1:after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border: 4px solid transparent;
+  border-top-color: rgb(255,64,129);
+  border-bottom-color: rgb(255,64,129);
+  -webkit-animation: spinny 1s linear infinite;
+          animation: spinny 1s linear infinite;
+}
+
+@-webkit-keyframes spinny {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes spinny {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) scale(1.2);
+            transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+.body {
+    margin: 0;
+}
+
+footer {
+    margin-top: 150px;
+    right: 0; left: 0; bottom: 0;
+}
+
+.white-grid {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left: 200px!important;
+    margin-right: 200px!important;
+}
+
+.inner-grid {
+    padding: 100px!important;
+    padding-top: 0px!important;    
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 0px;
+        padding: 0;
+    }
+
+    .inner-grid {
+        padding: 75px!important;
+        padding-top: 0px!important;
+    }
+
+    .white-grid {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+}
