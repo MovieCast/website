@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Alpha builds and more
-date: 2017-07-18
+date: 2017-08-01
 author: Dizzy
 banner: https://images6.alphacoders.com/316/thumb-1920-316370.jpg
 ---
