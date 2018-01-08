@@ -1,20 +1,35 @@
 {
-  "name": "mcweb",
+  "name": "@moviecast/website",
+  "homepage": "https://moviecast.xyz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "material-ui": "^1.0.0-beta.4",
-    "material-ui-icons": "^1.0.0-alpha.19",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.11",
-    "react-swipeable-views": "^0.12.5"
+    "axios": "^0.17.1",
+    "gh-pages": "^1.0.0",
+    "jss": "^8.1.0",
+    "jss-preset-default": "^3.0.0",
+    "material-ui": "^1.0.0-beta.27",
+    "material-ui-icons": "^1.0.0-beta.17",
+    "prop-types": "latest",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "typeface-roboto": "^0.0.43"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
   }
 }

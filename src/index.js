@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './components/App/App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import store, { history } from './store/createStore';
+
+import 'typeface-roboto';
+
+ReactDOM.render(
+  <App
+    store={store}
+    history={history}
+  />,
+  document.getElementById('root')
+);
