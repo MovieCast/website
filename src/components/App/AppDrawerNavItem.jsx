@@ -2,23 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { withStyles } from 'material-ui/styles';
 import { ListItem, ListItemIcon, ListItemText } from 'material-ui';
-
-const styles = {
-  root: {
-    paddingLeft: 10
-  }
-}
 
 function AppDrawerNavItem(props) {
   return (
-    <ListItem button component={Link} to={props.to} onClick={props.onClick}>
+    <ListItem button component={props.href ? 'a' : Link} to={props.to} href={props.href} onClick={props.onClick}>
       {props.icon &&
         <ListItemIcon>
           {props.icon}
         </ListItemIcon>}
-      <ListItemText primary={props.text} classes={{ text: props.classes.root }} />
+      <ListItemText primary={props.text} />
     </ListItem>
   );
 }
@@ -36,4 +29,4 @@ AppDrawerNavItem.defaultProps = {
   onClick: null
 };
 
-export default withStyles(styles)(AppDrawerNavItem);
+export default AppDrawerNavItem;

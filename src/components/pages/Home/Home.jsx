@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Typography, Button } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import ScrollButton from '../../internal/ScrollButton';
+//import ScrollButton from '../../internal/ScrollButton';
+import desktop from './desktop.png';
 
 const styles = theme => ({
   root: {
@@ -13,19 +14,31 @@ const styles = theme => ({
     minHeight: '100vh',//'75vh',
     flex: '0 0 auto',
     display: 'flex',
-    justifyContent: 'center',
+    flexFlow: 'column',
+    justifyContent: 'flex-end',
     alignItems: 'center',
+    position: 'relative',
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.primary[500] : theme.palette.primary[800],
-    color: theme.palette.getContrastText(theme.palette.primary[500]),
+      theme.palette.type === 'light' ? theme.palette.primary.main : theme.palette.primary.dark,
+    color: theme.palette.primary.contrastText
+  },
+  desktop: {
+    minWidth: 200,
+    maxWidth: 1280,
+    width: '80%',
+    height: 'auto',
+    boxShadow: theme.shadows[10]
   },
   content: {
     paddingTop: theme.spacing.unit * 8,
     paddingBottom: theme.spacing.unit * 8,
     [theme.breakpoints.up('sm')]: {
-      paddingTop: theme.spacing.unit * 16,
-      paddingBottom: theme.spacing.unit * 14,
+      paddingTop: theme.spacing.unit * 16
     },
+    zIndex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    flex: '1 0 auto'
   },
   text: {
     paddingLeft: theme.spacing.unit * 4,
@@ -60,49 +73,72 @@ class Home extends Component {
       shadow: false
     });
 
-    this.props.fetchLastRelease();
+    this.props.settingsActions.detectUserAgent();
+    this.props.releasesActions.fetchLastRelease();
   }
 
-  getWinAsset() {
-    const { releases: { latest } } = this.props;
+  getDownloadButton() {
+    const { classes, releases, settings } = this.props;
 
-    if(latest.assets) {
-      return latest.assets.find(asset => asset.content_type === 'application/x-msdownload')
+    if(!releases.latest || settings.userAgent === 'unknown') {
+      return (
+        <Button
+          className={classes.button}
+          disabled
+          variant="raised"
+        >
+          Fetching releases
+        </Button>
+      )
     }
-    return null;
+
+    try {
+      const asset = releases.latest.assets[settings.userAgent][0];
+      return (
+        <Button
+          component="a"
+          className={classes.button}
+          href={asset.browser_download_url}
+          variant="raised"
+        >
+          Download MovieCast {releases.latest.version}
+        </Button>
+      )
+    } catch(e) {
+      console.log(`releases: No asset found for ${settings.userAgent}`, e);
+      return (
+        <Button
+          className={classes.button}
+          disabled
+          variant="raised"
+        >
+          No binaries found
+        </Button>
+      )
+    }
   }
 
   render() {
     const { classes } = this.props;
-
-    const winAsset = this.getWinAsset();
-    const href = winAsset ? winAsset.browser_download_url : "https://github.com/MovieCast/desktop/releases";
 
     return (
       <div className={classes.root}>
         <div className={classes.hero}>
           <div className={classes.content}>
             <div className={classes.text}>
-              <Typography type="display2" component="h1" color="inherit" gutterBottom>
+              <Typography variant="display2" component="h1" color="inherit" gutterBottom>
                 MovieCast
               </Typography>
-              <Typography type="headline" component="h2" color="inherit" className={classes.headline}>
+              <Typography variant="headline" component="h2" color="inherit" className={classes.headline}>
                 Streaming movies and shows has never been easier!
               </Typography>
               {/* <Typography color="inherit">
                 Currently still in beta, but it can never hurt to try!
               </Typography> */}
-              <Button
-                component="a"
-                className={classes.button}
-                //to={classes.container}
-                href={href}
-                raised
-              >
-                Download MovieCast Now
-              </Button>
+              {this.getDownloadButton()}
             </div>
           </div>
+          <img className={classes.desktop} src={desktop} alt="" />
         </div>
         {/* <div className={classes.homeContent}>
           <div className={classes.container}>

@@ -34,10 +34,10 @@ class AppNav extends Component {
       <div>
         <AppBar position="fixed" className={classNames({[classes.noShadow]: !shadow})}>
           <Toolbar>
-            <IconButton className={classes.menuButton} color="contrast" aria-label="Menu" onClick={onMenuClick}>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={onMenuClick}>
               <MenuIcon />
             </IconButton>
-            <Typography type="title" color="inherit" className={classes.grow}>
+            <Typography variant="title" color="inherit" className={classes.grow}>
               MovieCast
             </Typography>
           </Toolbar>

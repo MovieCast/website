@@ -38,7 +38,7 @@ function AppDrawer(props) {
     >
       <div className={classes.nav}>
         <Toolbar className={classes.toolbar}>
-          <Typography type="title" color="inherit">
+          <Typography variant="title" color="inherit">
             MovieCast
           </Typography>
           <Divider absolute />
@@ -49,6 +49,12 @@ function AppDrawer(props) {
           <AppDrawerNavItem
             to="/"
             text="Home"
+            onClick={props.onRequestClose}
+          />
+
+          <AppDrawerNavItem
+            href="https://github.com/MovieCast/desktop/releases"
+            text="Releases"
             onClick={props.onRequestClose}
           />
 

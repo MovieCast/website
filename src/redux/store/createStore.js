@@ -20,25 +20,20 @@ const middleware = [
   routerMiddleware(history)
 ];
 
-// if (process.env.NODE_ENV === 'development') {
-//   const devToolsExtension = window.devToolsExtension;
+let composeEnhancers;
 
-//   if (typeof devToolsExtension === 'function') {
-
-//     
-
-//     enhancers.push(devToolsExtension());
-//   }
-// }
-
-const actionCreators = {
+if (process.env.NODE_ENV === 'development') {
+  const actionCreators = {
     ...releasesActions,
     ...routerActions,
   };
 
-const composeEnhancers = composeWithDevTools({
-  actionCreators
-});
+  composeEnhancers = composeWithDevTools({
+    actionCreators
+  });
+} else {
+  composeEnhancers = compose;
+}
 
 const composedEnhancers = composeEnhancers(
   applyMiddleware(...middleware),
