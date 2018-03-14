@@ -1,8 +1,9 @@
 {
   "main.css": "static/css/main.e4d18683.css",
   "main.css.map": "static/css/main.e4d18683.css.map",
-  "main.js": "static/js/main.ea8367f9.js",
-  "main.js.map": "static/js/main.ea8367f9.js.map",
+  "main.js": "static/js/main.d889db00.js",
+  "main.js.map": "static/js/main.d889db00.js.map",
+  "static\\media\\desktop.png": "static/media/desktop.23a418f7.png",
   "static\\media\\roboto-latin-100.woff": "static/media/roboto-latin-100.02fbb4cf.woff",
   "static\\media\\roboto-latin-100.woff2": "static/media/roboto-latin-100.01dbb814.woff2",
   "static\\media\\roboto-latin-100italic.woff": "static/media/roboto-latin-100italic.87528ba9.woff",
